@@ -75,9 +75,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-BASE_PATH = r"/content/drive/MyDrive/gohak/Rag_model_and_chatbot"
+BASE_PATH = os.getcwd()
 ASSETS_PATH = os.path.join(BASE_PATH, "assets")
 SINGLE_BANNER_PATH = os.path.join(ASSETS_PATH, "banner7.png")
+
 
 def get_image_as_bytes(path):
     """Reads a local image file into bytes."""
