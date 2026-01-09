@@ -147,7 +147,7 @@ def build_rag_chain():
 
     # LLM
     llm = ChatGroq(
-        groq_api_key="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",
+        groq_api_key = st.secrets["GROQ_API_KEY"],
         model_name="llama-3.1-8b-instant",
         temperature=0.2
     )
