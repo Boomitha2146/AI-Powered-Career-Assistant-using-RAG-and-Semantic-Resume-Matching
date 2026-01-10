@@ -9,7 +9,7 @@ from pptx import Presentation
 import fitz 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
