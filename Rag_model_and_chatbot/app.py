@@ -1,4 +1,3 @@
-
 import os, base64
 import streamlit as st
 import pandas as pd
@@ -9,7 +8,7 @@ from pptx import Presentation
 import fitz 
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 from langchain_community.vectorstores import FAISS
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.huggingface_pipeline import HuggingFacePipeline
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -75,10 +74,9 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-BASE_PATH = os.getcwd()
+BASE_PATH = r"/content/drive/MyDrive/gohak/Rag_model_and_chatbot"
 ASSETS_PATH = os.path.join(BASE_PATH, "assets")
 SINGLE_BANNER_PATH = os.path.join(ASSETS_PATH, "banner7.png")
-
 
 def get_image_as_bytes(path):
     """Reads a local image file into bytes."""
@@ -147,7 +145,7 @@ def build_rag_chain():
 
     # LLM
     llm = ChatGroq(
-        groq_api_key = st.secrets["GROQ_API_KEY"],
+        groq_api_key="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",
         model_name="llama-3.1-8b-instant",
         temperature=0.2
     )
